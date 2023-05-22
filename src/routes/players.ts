@@ -7,6 +7,10 @@ const playersRouter = express.Router();
 
 playersRouter.get("/:id", playersController.getById);
 
-playersRouter.use(apiErrorHandler);
+playersRouter.get("/", playersController.getAll);
+
+playersRouter.post("/", playersController.add);
+
+playersRouter.patch("/:id", playersController.update);
 
 export default playersRouter;

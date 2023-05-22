@@ -9,7 +9,7 @@ export class BaseRepository<T> {
     this.selectedColumns = selectedColumns;
   }
 
-  add(item: object): Promise<number> {
+  add(item: object): Promise<number[]> {
     return db(this.table).insert(item);
   }
 
